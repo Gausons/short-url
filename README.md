@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/github/Gausons/short-url/branch/master/graph/badge.svg?token=7TL9OF9X7Z)](https://codecov.io/github/Gausons/short-url)
 ## C++ Addon 编译
 node-gyp configure build
 
