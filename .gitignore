@@ -1,6 +1,5 @@
 node_modules/
 build/
 coverage/
-.vscode/
 package-lock.json
 config.yaml
