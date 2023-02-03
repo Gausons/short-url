@@ -9,9 +9,9 @@ npm run dev
 
 ## 项目依赖
 
-- redis 版本
-  使用 @redis/bloom 提供的布隆过滤器
-  docker pull redislabs/rebloom:latest
+- redis 版本<br>
+  使用 @redis/bloom 提供的布隆过滤器<br>
+  docker pull redislabs/rebloom:latest<br>
 
-- postgres
+- postgres<br>
   docker pull postgres
