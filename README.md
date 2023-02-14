@@ -4,6 +4,7 @@
 
 [![codecov](https://codecov.io/github/Gausons/short-url/branch/master/graph/badge.svg?token=7TL9OF9X7Z)](https://codecov.io/github/Gausons/short-url)
 ## C++ Addon 编译
+linux 环境: 需要安装 python3.0 以上，以及 gcc
 node-gyp configure build
 
 ## 单元测试
