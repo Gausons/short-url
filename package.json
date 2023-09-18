@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "debug": "node --inspect-brk ./bin/www",
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "clean": "tsc -b --clean",
+    "start": "npm run build && NODE_ENV=production node ./dist/src/app.js",
+    "pm2-start": "npm run build && pm2 start src/app.js --name appName"
   },
   "author": "",
   "license": "ISC",

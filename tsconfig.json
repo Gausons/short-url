@@ -4,6 +4,7 @@
     "target": "es6",
     "module": "commonjs",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
   }
 }
