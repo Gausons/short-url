@@ -7,6 +7,9 @@
 linux 环境: 需要安装 python3.0 以上，以及 gcc <br>
 node-gyp configure build
 
+## node 版本
+v16.0.0 以上
+
 ## 单元测试
 npm run test
 

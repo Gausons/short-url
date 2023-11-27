@@ -13,11 +13,11 @@ export async function createShortUrl(req: Request, res: Response) {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       const reason = errors.array({
-        onlyFirstError:true
+        onlyFirstError: true
       })[0];
       return res.status(HttpStatus.BAD_REQUEST).json({
         code: ErrorCode.ParamError,
-        msg: `Param ${reason.param} is invalid value }`
+        msg: `{ Param ${reason.param} is invalid value }`
       });
     }
     const { longUrl } = req.body;
@@ -41,7 +41,7 @@ export async function getLongUrl(req: Request, res: Response) {
   try {
     const errors = validationResult(req);
     const reason = errors.array({
-      onlyFirstError:true
+      onlyFirstError: true
     })[0];
     if (!errors.isEmpty()) {
       return res.status(HttpStatus.BAD_REQUEST).json({
