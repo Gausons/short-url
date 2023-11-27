@@ -38,9 +38,9 @@ class ShortUrlService {
 
   public async getLongUrlByShortUrl(shortUrl: string) {
     const isExist = await this.filterUrl(shortUrl, FilterType.ShortUrl);
-    // if (!isExist) {
-    //   throw new Error('长链接不存在');
-    // }
+    if (!isExist) {
+      throw new Error('长链接不存在');
+    }
     const longUrl = await this.shortUrlProvider.getLongUrlByShortUrl(shortUrl);
     if (!longUrl) {
       throw new Error('获取长链接失败');
