@@ -1,10 +1,10 @@
-import { ShortUrlProvider } from '../provider/shortUrl.provider'
+import ShortUrlProvider from '../provider/shortUrl.provider'
 import { createShortUrl } from '../common/utils/shortUrlCreate.utils'
 import { redis } from '../common/cache/redis.cache';
 import { RedisClusterType, RedisClientType } from 'redis';
 import { FilterType } from '../common/interface/bloomFilter.interface';
 
-class ShortUrlService {
+export default class ShortUrlService {
   private shortUrlProvider: ShortUrlProvider;
   private redis: RedisClientType | RedisClusterType;
 
@@ -53,4 +53,3 @@ class ShortUrlService {
   }
 
 }
-export { ShortUrlService };

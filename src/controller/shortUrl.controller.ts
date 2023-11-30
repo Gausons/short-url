@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { ShortUrlService } from '../service/shortUrl.service';
-import { ShortUrlProvider } from '../provider/shortUrl.provider';
+import ShortUrlService from '../service/shortUrl.service';
+import ShortUrlProvider from '../provider/shortUrl.provider';
 import { config } from '../common/config/index';
 import { ErrorCode, HttpStatus } from '../common/interface/errorCode.interface';
 import { validationResult } from 'express-validator';

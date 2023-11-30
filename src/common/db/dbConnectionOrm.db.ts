@@ -1,16 +1,16 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { ShortUrl } from '../../entities/shortUrl.entity';
 import { config } from '../../common/config/index'
-class DbConnection extends DataSource {
+export default class DbConnection extends DataSource {
     private static instance: DbConnection;
-    constructor(options: DataSourceOptions){
+    constructor(options: DataSourceOptions) {
         super(options);
     }
-    
+
     public static async getInstance(): Promise<DbConnection> {
         if (!DbConnection.instance) {
             const { type, host, port, database, username, password, synchronize } = config.dbConfig;
-            DbConnection.instance = await new DbConnection({  
+            DbConnection.instance = await new DbConnection({
                 type,
                 host,
                 port,
@@ -21,9 +21,7 @@ class DbConnection extends DataSource {
                 entities: [ShortUrl]
             }).initialize();
         }
-        
+
         return DbConnection.instance;
     }
 }
-
-export { DbConnection };

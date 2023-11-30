@@ -1,0 +1,9 @@
+dist
+.vscode
+node_modules
+*.md
+logs
+run
+.github
+.git
+.gitignore

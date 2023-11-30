@@ -1,6 +1,6 @@
-import { ShortUrlProvider } from '../../provider/shortUrl.provider';
-import { DbConnection } from '../../common/db/dbConnectionOrm.db';
-import { random } from 'lodash';
+import ShortUrlProvider from '../../provider/shortUrl.provider';
+import DbConnection from '../../common/db/dbConnectionOrm.db';
+// import { random } from 'lodash';
 import { createShortUrl } from '../../common/utils/shortUrlCreate.utils'
 describe('ShortUrlProvider', () => {
   let shortUrlProvider: ShortUrlProvider;

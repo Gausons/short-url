@@ -1,5 +1,5 @@
-import { ShortUrlProvider } from '../../provider/shortUrl.provider';
-import { ShortUrlService } from '../../service/shortUrl.service';
+import ShortUrlProvider from '../../provider/shortUrl.provider';
+import ShortUrlService from '../../service/shortUrl.service';
 
 describe('ShortUrlService', () => {
   let shortUrlService: ShortUrlService;
@@ -12,7 +12,7 @@ describe('ShortUrlService', () => {
 
   it('should saveShortUrl', async () => {
     const longUrl = 'http://www.test.com';
-    const spySaveShortUrl = jest.spyOn(shortUrlProvider,'saveShortUrl');
+    const spySaveShortUrl = jest.spyOn(shortUrlProvider, 'saveShortUrl');
 
     const result = await shortUrlService.saveShortUrl(longUrl);
 
@@ -23,7 +23,7 @@ describe('ShortUrlService', () => {
 
   it('should getShortUrlByLongUrl', async () => {
     const longUrl = 'http://www.test.com';
-    const spyGetShortUrlByLongUrl = jest.spyOn(shortUrlProvider,'getShortUrlByLongUrl');
+    const spyGetShortUrlByLongUrl = jest.spyOn(shortUrlProvider, 'getShortUrlByLongUrl');
 
     const result = await shortUrlService.getShortUrlByLongUrl(longUrl);
 
@@ -34,7 +34,7 @@ describe('ShortUrlService', () => {
 
   it('should getLongUrlByShortUrl', async () => {
     const shortUrl = 'ZSObExH3';
-    const spyGetLongUrlByShortUrl = jest.spyOn(shortUrlProvider,'getLongUrlByShortUrl');
+    const spyGetLongUrlByShortUrl = jest.spyOn(shortUrlProvider, 'getLongUrlByShortUrl');
 
     const result = await shortUrlService.getLongUrlByShortUrl(shortUrl);
 
