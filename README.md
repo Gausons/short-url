@@ -23,6 +23,9 @@ npm run dev
 - postgres: docker pull postgres
 
 ## TODO
+- 优先解决部署问题
+  - 提供 docker-compose 部署脚本
+  - 支持 helm
 - 由于 node 本身存在的内存和性能问题，后续会提供一版 Golang 方案。
   node 服务作为短链生成器还是没有问题的，Golang 版本目前只打算作为转化器使用。
  
